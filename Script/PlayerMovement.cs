@@ -27,13 +27,13 @@ public class PlayerMovement : MonoBehaviour
     {
         // Gerakkan karakter berdasarkan input
         rb.velocity = new Vector3(moveDirection.x * moveSpeed, rb.velocity.y);
-        if(moveDirection.x > 0)
-        {
-            animator.SetBool("MoveRight", true);
-        }
-        else
-        {
-            animator.SetBool("MoveLeft", true);
-        }
+        //if(moveDirection.x > 0)
+        //{
+        //    animator.SetBool("MoveRight", true);
+        //}
+        //else
+        //{
+        //    animator.SetBool("MoveLeft", true);
+        //}
     }
 }
