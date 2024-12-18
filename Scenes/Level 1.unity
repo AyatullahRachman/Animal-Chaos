@@ -335,6 +335,7 @@ MonoBehaviour:
   - {fileID: 226735146}
   - {fileID: 294977622}
   - {fileID: 1345824816}
+  spawnRate: 1
 --- !u!1001 &679771519
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -675,6 +676,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 52e146b2d1f9e5e41bcebd2ebea4e0e1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1224550347}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 52e146b2d1f9e5e41bcebd2ebea4e0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1224550349}
   m_SourcePrefab: {fileID: 100100000, guid: 52e146b2d1f9e5e41bcebd2ebea4e0e1, type: 3}
 --- !u!1 &1224550343 stripped
 GameObject:
@@ -757,6 +761,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodSpeed: 2
   firstFood: {fileID: 1428875179}
+--- !u!95 &1224550349
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224550343}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8577fef392b6d1b4fa76aff1964f595f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1345824815
 PrefabInstance:
   m_ObjectHideFlags: 0

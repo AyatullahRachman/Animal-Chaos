@@ -24,7 +24,7 @@ public class FoodThrower : MonoBehaviour
             nextFood = nextFood - myTimer;
             myTimer = 0f;
 
-            Destroy(firstFood, 5f);
+            Destroy(newFood, 5f);
         }
     }
 }

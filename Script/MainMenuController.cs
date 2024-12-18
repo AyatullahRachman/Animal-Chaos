@@ -7,7 +7,8 @@ public class MainMenuController : MonoBehaviour
 {
     public void PlayButton()
     {
-        //SceneManager = SceneManager.LoadScene();
+        SceneManager.LoadScene("Level 1");
+        Debug.Log("Masuk ke dalam permainan");
     }
 
     public void ExitButton()

@@ -8,9 +8,12 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
     private Vector3 moveDirection;
 
+    Animator animator;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
     }
     
     private void Update()
@@ -24,5 +27,13 @@ public class PlayerMovement : MonoBehaviour
     {
         // Gerakkan karakter berdasarkan input
         rb.velocity = new Vector3(moveDirection.x * moveSpeed, rb.velocity.y);
+        if(moveDirection.x > 0)
+        {
+            animator.SetBool("MoveRight", true);
+        }
+        else
+        {
+            animator.SetBool("MoveLeft", true);
+        }
     }
 }
