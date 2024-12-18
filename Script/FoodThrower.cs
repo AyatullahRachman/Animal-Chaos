@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class FoodThrower : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private float foodSpeed = 2f;
+    public GameObject firstFood;
 
-    // Update is called once per frame
+    private GameObject newFood;
+    private float nextFood = 1f;
+    private float myTimer = 0f;
+
     void Update()
     {
-        
+        myTimer = myTimer + Time.deltaTime;
+
+        if(Input.GetButton("Fire1") &&  myTimer > nextFood)
+        {
+            nextFood = myTimer + foodSpeed;
+            
+            newFood = Instantiate(firstFood, transform.position, transform.rotation) as GameObject;
+
+            nextFood = nextFood - myTimer;
+            myTimer = 0f;
+
+            Destroy(firstFood, 5f);
+        }
     }
 }

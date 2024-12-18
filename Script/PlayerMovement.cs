@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
     }
-
+    
     private void Update()
     {
         // Input untuk pergerakan kiri/kanan
