@@ -21,19 +21,18 @@ public class PlayerMovement : MonoBehaviour
         // Input untuk pergerakan kiri/kanan
         float moveX = Input.GetAxisRaw("Horizontal");
         moveDirection = new Vector3(moveX, 0, 0).normalized;
+        if(moveDirection.x > 1 || moveDirection.x < 0)
+        {
+            animator.SetBool("MoveRight", true);
+        }else
+        {
+            animator.SetBool("MoveLeft", true);
+        }
     }
 
     private void FixedUpdate()
     {
         // Gerakkan karakter berdasarkan input
         rb.velocity = new Vector3(moveDirection.x * moveSpeed, rb.velocity.y);
-        //if(moveDirection.x > 0)
-        //{
-        //    animator.SetBool("MoveRight", true);
-        //}
-        //else
-        //{
-        //    animator.SetBool("MoveLeft", true);
-        //}
     }
 }
